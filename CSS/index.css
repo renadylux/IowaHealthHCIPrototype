@@ -1,0 +1,9 @@
+#loginScreen{
+    height: 90%;
+    width: 100%;
+    min-height: 90%;
+}
+
+html, body {
+    height: 100%;
+}
