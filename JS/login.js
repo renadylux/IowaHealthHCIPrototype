@@ -1,10 +1,12 @@
  $( document ).ready(function(){
-    var isloggedIn = localStorage.getItem("loggedIn") || "false";
-    
+    var isloggedIn = localStorage.getItem("loggedIn") || "false",
+        firstName = localStorage.getItem("firstName") || null;
+    $("#mainContent").hide();
     if(isloggedIn == "true"){
-        console.log("here");
         $("#loginScreen").hide();
-        $("#questionScreen").hide(); 
+        $("#questionScreen").hide();
+        $("#mainContent").show(); 
+        setName();
     } 
     
     $("#signUpBtn").click(function(){
@@ -31,6 +33,7 @@
         localStorage.setItem("loggedIn", "true");
         $("#loginScreen").hide();
         $("#questionScreen").hide();
+        $("#mainContent").show();
     });
     
     $(".logout").click(function(){
@@ -39,5 +42,20 @@
         $("#questionScreen").show();
     });
 
+    $("#signUpFinish").click(function(){
+        var fname = $("#first_name").val();
+        console.log(fname);
+        localStorage.setItem("firstName" , fname);
+        setName();
+       
+
+    });
+
+ function setName(){
+     var fname = localStorage.getItem("firstName");
+    $("#welcomeText").text("Hello " + fname + "! How are you doing today?");
+ }
+
  });
+
  
