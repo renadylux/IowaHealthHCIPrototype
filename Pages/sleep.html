@@ -12,9 +12,9 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
         <script src="../JS/script.js"></script>
-        <script src="../JS/mood.js"></script>
+        <script src="../JS/sleep.js"></script>
         <script src="../JS/login.js"></script>
-        <script src="../JS/moodChart.js"></script>
+        <script src="../JS/sleepChart.js"></script>
         <link rel="stylesheet" href="../CSS/index.css"/>
     </head>
     <!--END Copy and paste this on all pages END-->
@@ -59,71 +59,72 @@
         </nav>
         <!--END Copy and paste this on all pages END-->
         
-    <div id="moodScreen" class="card screen">
+    <div id="sleepScreen" class="card screen">
         <div class="card-image waves-effect waves-block waves-light">
-            <h4 class="center">Track Your Mood</h4>
+            <h4 class="center">Track Your Sleep</h4>
             <form action="#">
                 <div class="row">
                     <div class="col s12">
-                        <h6>How are you feeling?</h6>
+                        <h6>Sleep Goal</h6>
                         <p class="range-field">
-                            <input type="range" id="test5" min="0" max="100" />
-                            <label>Sad</label>
-                            <label class="right">Happy</label>
+                            <input type="range" id="test5" min="0" max="12" />
+                            <label>0 Hours</label>
+                            <label class="right">12 Hours</label>
                         </p>            
                     </div>
-                    <div class="col s12">
-                        <h6>How stressed are you?</h6>
-                        <p class="range-field">
-                            <input type="range" id="test6" min="0" max="100" />
-                            <label>Not Stressed at all</label>
-                            <label class="right">Very Stressed</label>
-                        </p>            
+
+                    <div class="input-field col s12">
+                        <label for="sleepDate" class="">Date of Slumber</label>
+                        <input type="date" class="datepicker" required>
                     </div>
-                    <div class="col s12">
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
-                            <label for="textarea1">Describe how you feel</label>
+ 
+                    <div class="col s6">
+                            <input type="time" id="sleepTime" class="materialize-time"></textarea>
+                            <label for="textarea1">What time did you go to sleep?</label>
                     </div>
-                    <div class="col s12">
-                            <textarea id="textarea2" class="materialize-textarea"></textarea>
-                            <label for="textarea2">Have your moods shifted today?</label>
-                    </div>
-                    <div class="col s12">
-                            <textarea id="textarea3" class="materialize-textarea"></textarea>
-                            <label for="textarea3">Other notes</label>
-                    </div>                    
-                </div>
-                <button id="saveMood" class="btn waves-effect waves-light large right">Save
+
+                     <div class="col s6">
+                            <input type="time" id="wakeTime" class="materialize-time"></textarea>
+                            <label for="textarea1">What time did you wake up?</label>
+                    </div>    
+                </div><br><br>
+                <br><br>
+                <br><br>
+                <div class="row">
+                    <h5 id="hoursOfSleep" class="left">You slept: 0 hrs.</h5>
+                    <button id="saveSleep" class="btn waves-effect waves-light large right">Save
                         <i class="material-icons right">send</i>
-                </button>
+                    </button>
+                </div>
             </form>
         </div>   
     </div>
-    <div id="moodSumScreen" class="screen">
-        <h4>Previous Moods and stress</h4>
-        <div id="moodChart"></div>
-        <h5 class="center">Feeling down? Try taking a break! Tap relax above.</h5>
+    <div id="sleepSumScreen" class="screen">
+        <h4>Previous Sleep</h4>
+        <div id="sleepChart"></div>
+        <h5 class="center">You haven't slept lately. Try to go to bed early tonight!</h5>
         <div class="row">
             <div class="col s12">
                 <a id="doneMood" class="btn waves-effect waves-light large right" href="../index.html">Done
                                 <i class="material-icons right">done</i>
                 </a>   
-                <button id="moreMode" class="btn waves-effect waves-light large right">Add More
+                <button id="moreSleep" class="btn waves-effect waves-light large right">Add More
                                 <i class="material-icons right">loop</i>
                 </button>
             </div>
         </div>
         <div class="row">
             <div class="col s12">
-                  <h4>Previous Moods</h4>
+                <h5>Average Hours of Sleep: 6.5 hrs.</h5>
+                  <h4>Previous Sleep</h4>
                         <ul class="collection with-header">
-                            <li class="collection-item">Mood Log: 11/6/16</li>
-                            <li class="collection-item">Mood Log: 11/4/16</li>
-                            <li class="collection-item">Mood Log: 11/2/16</li>
-                            <li class="collection-item">Mood Log: 11/1/16</li>
-                            <li class="collection-item">Mood Log: 10/31/16</li>
-                            <li class="collection-item">Mood Log: 10/28/16</li>
-                            <li class="collection-item">Mood Log: 10/25/16</li>
+                            <li class="collection-item">Sleep 11/6/16: 5 hrs.</li>
+                            <li class="collection-item">Sleep 11/4/16: 8 hrs.</li>
+                            <li class="collection-item">Sleep 11/2/16: 8.5 hrs.</li>
+                            <li class="collection-item">Sleep 11/1/16: 9 hrs.</li>
+                            <li class="collection-item">Sleep 10/31/16: 6 hrs.</li>
+                            <li class="collection-item">Sleep 10/28/16: 5.5 hrs.</li>
+                            <li class="collection-item">Sleep 10/25/16: 5 hrs.</li>
                         </ul>
             </div>
         </div>
