@@ -9,13 +9,6 @@
 
     $('.datepicker').pickadate({});
 
-var sleepTime = 0;
-var wakeTime = 0;
-
-    $('#sleepTime').change(function(){
-        
-    });
-
     $('#wakeTime').change(function(){
         setHoursSlept(); 
         
