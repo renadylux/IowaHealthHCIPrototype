@@ -31,7 +31,8 @@
         var options = {
           title: 'Past Happiness and Stress Percent',
           curveType: 'function',
-          legend: { position: 'bottom' }
+          legend: { position: 'bottom' },
+          width:  window.innerWidth - 5
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('moodChart'));
