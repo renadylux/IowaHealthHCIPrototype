@@ -1,6 +1,7 @@
 
  $( document ).ready(function(){
-     $("#SaveJournal").click(function resetJournal(){
+     $("#SaveJournal").click(function resetJournal(e){
+          e.preventDefault();
         var jText = $("#journalArea").val();
         var today = new Date();
         var dd = today.getDate();
@@ -12,13 +13,11 @@
 
         if(mm<10) {
             mm='0'+mm
-        } 
-
+        }
         today = mm+'/'+dd+'/'+yyyy;
         var listElemText = "Journal " + today + ": " + jText;
-
-         $("#jList").prepend("<li class='collection-item'>" + listElemText + "</li>");
-    
+        
+        $("#jList").prepend("<li class='collection-item'>" + listElemText + "</li>");
     });
 });
 

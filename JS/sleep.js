@@ -1,9 +1,11 @@
  $( document ).ready(function(){
-     $("#saveSleep").click(function(){
+     $("#saveSleep").click(function(e){
+          e.preventDefault();
          $("#sleepScreen").slideUp();
      });
      
-     $("#moreSleep").click(function(){
+     $("#moreSleep").click(function(e){
+          e.preventDefault();
         $("#sleepScreen").slideDown();
      });
 

@@ -9,12 +9,14 @@
         setName();
     } 
     
-    $("#signUpBtn").click(function(){
+    $("#signUpBtn").click(function(e){
+         e.preventDefault();
         $("#loginScreen").hide();
         $("#questionScreen").show();
     });
 
-    $("#signUpClose").click(function(){
+    $("#signUpClose").click(function(e){
+         e.preventDefault();
         $("#questionScreen").hide();
         $("#loginScreen").show();
     });
@@ -37,12 +39,14 @@
     });
     
     $(".logout").click(function(){
+         
         localStorage.setItem("loggedIn", "false");
         $("#loginScreen").show();
         $("#questionScreen").show();
     });
 
-    $("#signUpFinish").click(function(){
+    $("#signUpFinish").click(function(e){
+         
         var fname = $("#first_name").val();
         console.log(fname);
         localStorage.setItem("firstName" , fname);
@@ -52,6 +56,7 @@
     });
 
  function setName(){
+      
      var fname = localStorage.getItem("firstName");
     $("#welcomeText").text("Hello " + fname + "! How are you doing today?");
  }
