@@ -1,19 +1,21 @@
  $( document ).ready(function(){
-     $("#saveSleep").click(function(e){
+     $("#sleepSumScreen").hide();
+     $(".saveSleep").click(function(e){
           e.preventDefault();
          $("#sleepScreen").slideUp();
+         $("#sleepSumScreen").show();
      });
      
      $("#moreSleep").click(function(e){
           e.preventDefault();
         $("#sleepScreen").slideDown();
+        $("#sleepSumScreen").hide();
      });
 
     $('.datepicker').pickadate({});
 
     $('#wakeTime').change(function(){
-        setHoursSlept(); 
-        
+        setHoursSlept();         
     });
 
     function setHoursSlept(){
