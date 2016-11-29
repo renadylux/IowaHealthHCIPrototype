@@ -25,7 +25,8 @@
             <li><a href="pages/help.html">Help</a></li>
             <li><a href="pages/contact.html">Contact</a></li>
         </ul>
-        <nav>
+        <div class="navbar-fixed">
+        <nav >
             <div class="nav-wrapper brown">
                 <a href="index.html" class="brand-logo">IA Health</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -55,6 +56,7 @@
                 </ul>
             </div>
         </nav>
+        </div>
 
     <div id="questionScreen">
         <span class="grey-text text-darken-4 large"><h5>Sign-Up</h5><i id="signUpClose" class="material-icons right">close</i></span>
@@ -193,10 +195,10 @@
         </div>
         <div class="row">
             <div class="col s12 center">
-                <a class="waves-effect waves-light btn-large" href="Pages/mood.html">Track Mood</a>
-                <a class="waves-effect waves-light btn-large" href="Pages/sleep.html">Track Sleep</a>
-                <a class="waves-effect waves-light btn-large" href="pages/relax.html">Relax</a>
-                <a class="waves-effect waves-light btn-large" href="pages/resources.html">Iowa Resources</a>
+                <a class="waves-effect waves-light btn-large home-btn" href="Pages/mood.html">Track Mood</a>
+                <a class="waves-effect waves-light btn-large home-btn" href="Pages/sleep.html">Track Sleep</a>
+                <a class="waves-effect waves-light btn-large home-btn" href="pages/relax.html">Relax</a>
+                <a class="waves-effect waves-light btn-large home-btn" href="pages/resources.html">Iowa Resources</a>
             </div>
         </div>
         <div class="row">
@@ -216,13 +218,17 @@
                     <div class="carousel-item blue" href="#four!">
                         <h4 class="white-text">Previous Journals</h4>
                         <ul class="collection with-header">
-                            <li class="collection-item">Daily Log: 11/6/16</li>
-                            <li class="collection-item">Daily Log: 11/4/16</li>
-                            <li class="collection-item">Daily Log: 11/2/16</li>
-                            <li class="collection-item">Daily Log: 11/1/16</li>
-                            <li class="collection-item">Daily Log: 10/31/16</li>
-                            <li class="collection-item">Daily Log: 10/28/16</li>
-                            <li class="collection-item">Daily Log: 10/25/16</li>
+                               <ul id="jList" class="collection with-header">
+                            <li class="collection-item">Journal 11/6/2016: Today I had the best
+                                day. I made cookies with my best friend and listened to EDM with him.</li>
+                            <li class="collection-item">Journal 11/4/2016: I'm really stressed about my job interview next week. I hope it goes well. </li>
+                            <li class="collection-item">Journal 11/2/2016: Eeenie meeenie mineee moe, catch a tiger
+                                let it go, if he hollers let it go, Maybe I shouldn't let it go....</li>
+                            <li class="collection-item">Journal 11/1/2016: Dude!!! I'm feeling soooooo pumped. Maybe my halloweeen was too crazy, but life is definately looking up from here...</li>
+                            <li class="collection-item">Journal 10/31/2016: Hello from the other side, at least I can say that I tried. Thats all I got. But I hope you get this message.</li>
+                            <li class="collection-item">Journal 10/28/2016: I want to write something of substance here, but I don't know what. Everything just feels numb because its too late..</li>
+                            <li class="collection-item">Journal 10/25/2016: Quarter past four I left the club tipsy, dum dum dum dum dum dum dum dum, yeah This is a bumping song.</li>
+                        </ul>
                         </ul>
                     </div>
                 </div>

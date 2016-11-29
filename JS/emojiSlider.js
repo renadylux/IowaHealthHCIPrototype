@@ -1,16 +1,3 @@
- $( document ).ready(function(){
-     $("#moodSumScreen").hide();
-     $(".saveMood").click(function(e){
-          e.preventDefault();
-         $("#moodScreen").slideUp();
-         $("#moodSumScreen").show();
-     });
-     $("#moreMode").click(function(e){
-          e.preventDefault();
-        $("#moodScreen").slideDown();
-        $("#moodSumScreen").hide();
-     });
-
 var gColorRed = "#CF0F0F";
 var gColorYellow = "#fcc21b";
 var gColorBlue = "#3764d5"; // "#095595";
@@ -29,6 +16,8 @@ var gLineWidth = 7;
 
 function draw_emoji(id, joy, anger) 
 {
+	var width = window.innerWidth > 480 ? 480 : window.innerWidth;
+	$("#myCanvas").width(width);
 	var c=document.getElementById(id);
 	var ctx=c.getContext("2d");
 	ctx.beginPath();
@@ -311,7 +300,7 @@ function ellipse(ctx, cx, cy, rx, ry)
   ctx.restore();
 }		
 
-
+$(function() {
  		draw_emoji("myCanvas", 0, 0);
 
     $("#slider-joy-sadness").slider(
@@ -335,8 +324,4 @@ function ellipse(ctx, cx, cy, rx, ry)
         }
       }
     );
-
-     
- });
-
- 
+  });
