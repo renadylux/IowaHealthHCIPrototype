@@ -65,15 +65,7 @@
             <h4 class="center">Track Your Sleep</h4>
             <form action="#">
                 <div class="row">
-                    <div class="col s12">
-                        <h6>Sleep Goal</h6>
-                        <p class="range-field">
-                            <input type="range" id="test5" min="0" max="12" />
-                            <label>0 Hours</label>
-                            <label class="right">12 Hours</label>
-                        </p>            
-                    </div>
-
+                    
                     <div class="input-field col s12">
                         <label for="sleepDate" class="">Date of Slumber</label>
                         <input type="date" class="datepicker" required>
@@ -93,10 +85,10 @@
                 <br><br>
                 <div class="row">
                     <h5 id="hoursOfSleep" class="left">You slept: 0 hrs.</h5>
-                    <button id="saveSleep" class="btn waves-effect waves-light large right saveSleep">Save
+                    <button id="saveSleep" class="btn waves-effect waves-light large right saveSleep margins">Save
                         <i class="material-icons right">send</i>
                     </button>
-                     <button class="btn waves-effect waves-light large right saveSleep">Show Previous</button>
+                     <button class="btn waves-effect waves-light large right saveSleep margins">Previous Sleep</button>
                 </div>
             </form>
         </div>   
@@ -104,13 +96,22 @@
     <div id="sleepSumScreen" class="screen">
         <h4 class="center">Previous Sleep</h4>
         <div id="sleepChart"></div>
+        <div class="col s12">
+            <h6>Sleep Goal: 6 Hours</h6>
+            <p class="range-field">
+                <input type="range" id="test5" min="0" max="12" />
+                <label>0 Hours</label>
+                <label class="right">12+ Hours</label>
+            </p>            
+        </div>
+
         <h5 class="center">You haven't slept lately. Try to go to bed early tonight!</h5>
         <div class="row">
             <div class="col s12">
-                <a id="doneMood" class="btn waves-effect waves-light large right" href="../index.html">Done
+                <a id="doneMood" class="btn waves-effect waves-light large right margins" href="../index.html">Done
                                 <i class="material-icons right">done</i>
                 </a>   
-                <button id="moreSleep" class="btn waves-effect waves-light large right">Add More
+                <button id="moreSleep" class="btn waves-effect waves-light large right margins">Add More
                                 <i class="material-icons right">loop</i>
                 </button>
             </div>
