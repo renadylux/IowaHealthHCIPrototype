@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>IA Health</title>
+        <meta name="description" content="IA Health HCI Prototype">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="JS/moodChart.js"></script>
+        <script src="JS/sleepChart.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script src="JS/script.js"></script>
+        <script src="JS/login.js"></script>
+        <link rel="stylesheet" href="CSS/index.css"/>
+    </head>
+    
+    <body>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a class="logout" href="index.html">Logout</a></li>
+            <li><a href="Pages/Settings.html">Settings</a></li>
+            <li><a href="Pages/about.html">About</a></li>
+            <li><a href="Pages/help.html">Help</a></li>
+            <li><a href="Pages/contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-fixed">
+        <nav >
+            <div class="nav-wrapper brown">
+                <a href="index.html" class="brand-logo">IA Health</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Pages/mood.html">Mood</a></li>
+                    <li><a href="Pages/sleep.html">Sleep</a></li>
+                    <li><a href="Pages/resources.html">Iowa Resources</a></li>
+                    <li><a href="Pages/Relax.html">Relax</a></li>
+                    <li><a href="Pages/journal.html">Journals</a></li>
+                    <li><a href="Pages/community.html">Community</a></li>                    
+                    <li><a class="dropdown-button2" href="#!" data-activates="dropdown1">Settings<i class="material-icons right">arrow_drop_down</i></a></li>                    
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Pages/mood.html">Mood</a></li>
+                    <li><a href="Pages/sleep.html">Sleep</a></li>
+                    <li><a href="Pages/resources.html">Iowa Resources</a></li>
+                    <li><a href="Pages/Relax.html">Relax</a></li>
+                    <li><a href="Pages/journal.html">Journals</a></li>
+                    <li><a href="Pages/community.html">Community</a></li>
+                    <li><a class="logout" href="index.html">Logout</a></li>
+            <li><a href="Pages/Settings.html">Settings</a></li>
+            <li><a href="Pages/about.html">About</a></li>
+            <li><a href="Pages/help.html">Help</a></li>
+            <li><a href="Pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+
+    <div id="questionScreen">
+        <span class="grey-text text-darken-4 large"><h5>Sign-Up</h5><i id="signUpClose" class="material-icons right">close</i></span>
+        <div class="row">
+            <h5>We are glad you are joining us!</h5>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="first_name" type="text" class="validate" required>
+                        <label for="first_name">First Name</label>    
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate" required>
+                        <label for="last_name">Last Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate" required>
+                        <label for="email" data-error="wrong" data-success="right">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate" required>
+                        <label for="password">Password</label>
+                    </div>  
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate" required>
+                        <label for="password">Confirm Password</label>
+                    </div>                   
+                    <div class="input-field col s12">
+                        <label for="birthdate" class="">Birthdate</label>
+                        <input type="date" class="datepicker" required>
+                    </div>
+                    <div class="input-field col s12">
+                        <select required>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">University of Iowa</option>
+                            <option value="2">Iowa State</option>
+                            <option value="3">UNI</option>
+                            <option value="4">Other</option>
+                        </select>
+                        <label>School</label>
+                    </div>
+                    <div class=" col s6">
+                        <label>Gender</label>
+                        <p>
+                        <input name="group1" type="radio" id="test1" />
+                        <label for="test1">Male</label>
+                        </p>
+                        <p>
+                        <input name="group1" type="radio" id="test2" />
+                        <label for="test2">Female</label>
+                        </p>
+                        <p>
+                        <input class="with-gap" name="group1" type="radio" id="test3"  />
+                        <label for="test3">Other</label>
+                        </p>
+                    </div>
+                    <div class="input-field col s6">
+                        <select required>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Exercise</option>
+                            <option value="2">Nap</option>
+                            <option value="3">TV</option>
+                            <option value="4">Dancing</option>
+                            <option value="6">Browse the Web</option>
+                            <option value="5">Other</option>
+                        </select>
+                        <label>Favorite Relaxing Activity</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select required>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">YouTube</option>
+                            <option value="2">Spotify</option>
+                            <option value="3">Pandora</option>
+                            <option value="4">Google Play Music</option>
+                            <option value="5">Apple Music</option>
+                            <option value="6">Other</option>
+                        </select>
+                        <label>Favorite Music App</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select required>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Facebook</option>
+                            <option value="2">Instagram</option>
+                            <option value="3">Reddit</option>
+                            <option value="4">SnapChat</option>
+                            <option value="5">Pinterest</option>
+                            <option value="6">Other</option>
+                        </select>
+                        <label>Favorite Social Media App</label>
+                    </div>
+                    <button id="signUpFinish" class="loginBtn btn waves-effect waves-light large" type="submit" name="action">Sign-Up
+                        <i class="material-icons right">send</i>
+                    </button>
+                    </div>
+                </form>
+            </div> 
+    </div>           
+    
+
+    <div id="loginScreen" class="card large screen">
+        <div class="card-image waves-effect waves-block waves-light">
+            <h1 class="center">Welcome to IA Health!</h1>
+            <h4 class="center">Sign Up or Login to begin</h4>
+        </div>
+        <div class="card-content center">
+            <button class="activator btn waves-effect waves-light large center" type="submit" name="action">Login</button>
+            <button id="signUpBtn" class="btn waves-effect waves-light large center" type="submit" name="action">Sign-Up</button>
+        </div>
+        <div class="card-action">
+                <a href="Pages/help.html">Help</a>
+                <a href="Pages/contact.html">Contact</a>
+                <a href="Pages/about.html">About</a>
+              </div>
+        <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Login<i class="material-icons right">close</i></span>
+            <div class="row">
+                    <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email" data-error="wrong" data-success="right">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <button id="loginBtn" class="loginBtn btn waves-effect waves-light large" >Login
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>    
+        </div>
+    </div>
+
+    <div id="mainContent">
+        <div class="row">
+            <h3 id="welcomeText" class="center"></h3>
+        </div>
+        <div class="row">
+            <div class="col s12 center">
+                <a class="waves-effect waves-light btn-large home-btn" href="Pages/mood.html">Mood Tracking</a>
+                <a class="waves-effect waves-light btn-large home-btn" href="Pages/sleep.html">Sleep Tracking</a>
+                <a class="waves-effect waves-light btn-large home-btn" href="Pages/Relax.html">Relax</a>
+                <a class="waves-effect waves-light btn-large home-btn" href="Pages/resources.html">Resources at Iowa</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 center">
+                    <div class="carousel carousel-slider center" data-indicators="true">
+                    
+                    <div class="carousel-item brown white-text" href="#one!">
+                        <h4>Previous Moods and stress</h4>
+                        <div id="moodChart"></div>
+                        <h5>Feeling down? Try taking a break! Tap relax above.</h5>
+                    </div>
+                    <div class="carousel-item teal white-text" href="#two!">
+                        <h4>Previous Sleep</h4>
+                        <div id="sleepChart"></div>
+                        <h5>You haven't slept well in the past few days. Try to get some rest tonight.</h5>
+                    </div>
+                    <div class="carousel-item blue" href="#four!">
+                        <h4 class="white-text">Previous Journals</h4>
+                        <ul class="collection with-header">
+                               <ul id="jList" class="collection with-header">
+                            <li class="collection-item">Journal 11/6/2016: Today I had the best
+                                day. I made cookies with my best friend and listened to EDM with him.</li>
+                            <li class="collection-item">Journal 11/4/2016: I'm really stressed about my job interview next week. I hope it goes well. </li>
+                            <li class="collection-item">Journal 11/2/2016: Eeenie meeenie mineee moe, catch a tiger
+                                let it go, if he hollers let it go, Maybe I shouldn't let it go....</li>
+                            <li class="collection-item">Journal 11/1/2016: Dude!!! I'm feeling soooooo pumped. Maybe my halloweeen was too crazy, but life is definately looking up from here...</li>
+                            <li class="collection-item">Journal 10/31/2016: Hello from the other side, at least I can say that I tried. Thats all I got. But I hope you get this message.</li>
+                            <li class="collection-item">Journal 10/28/2016: I want to write something of substance here, but I don't know what. Everything just feels numb because its too late..</li>
+                            <li class="collection-item">Journal 10/25/2016: Quarter past four I left the club tipsy, dum dum dum dum dum dum dum dum, yeah This is a bumping song.</li>
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>      
+    </body>
+</html>

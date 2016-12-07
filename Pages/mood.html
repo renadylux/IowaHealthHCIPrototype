@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <!--START Copy and paste this on all pages START-->
+    <head>
+        <meta charset="utf-8">
+        <title>IA Health - Mood</title>
+        <meta name="description" content="IA Health HCI Prototype">
+        <meta name="author" content="SitePoint">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script src="../JS/script.js"></script>
+        <script src="../JS/mood.js"></script>
+        <script src="../JS/login.js"></script>
+        <script src="../JS/moodChart.js"></script>
+        <script src="../JS/emojiSlider.js"/>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+        <script src="../JS/touchJQUI.js"></script>
+        <link rel='stylesheet prefetch' href='https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'>
+        <link rel="stylesheet" href="../CSS/index.css"/>         
+
+    </head>
+    <!--END Copy and paste this on all pages END-->
+    <body>
+        <!--START Copy and paste this on all pages START-->
+         <ul id="dropdown1" class="dropdown-content">
+            <li><a class="logout" href="../index.html">Logout</a></li>
+            <li><a href="Settings.html">Settings</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper brown">
+                <a href="../index.html" class="brand-logo">IA Health</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="mood.html">Mood</a></li>
+                    <li><a href="sleep.html">Sleep</a></li>
+                    <li><a href="resources.html">Iowa Resources</a></li>
+                    <li><a href="Relax.html">Relax</a></li>
+                    <li><a href="journal.html">Journals</a></li>
+                    <li><a href="community.html">Community</a></li>                    
+                    <li><a class="dropdown-button2" href="#!" data-activates="dropdown1">Settings<i class="material-icons right">arrow_drop_down</i></a></li>                    
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="mood.html">Mood</a></li>
+                    <li><a href="sleep.html">Sleep</a></li>
+                    <li><a href="resources.html">Iowa Resources</a></li>
+                    <li><a href="Relax.html">Relax</a></li>
+                    <li><a href="journal.html">Journals</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a class="logout" href="../index.html">Logout</a></li>
+            <li><a href="Settings.html">Settings</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+        <!--END Copy and paste this on all pages END-->
+        
+    <div id="moodScreen" class=" screen">
+            <div class="card-image waves-effect waves-block waves-light">
+            <h4 class="center">Track Your Mood</h4>
+            <form action="#">
+                <div class="row">
+                    <h6>What are you feeling?</h6>
+            <div style="width: 100%; overflow: auto;">
+            <canvas id="myCanvas" class="center" width="480" height="300"></canvas>
+            </div>
+            <br />
+            <br />
+            <div style="width: 100%; height: 60px; overflow: auto; padding: 20px;">
+                <div  style="margin-left: auto; margin-right: auto;" id="slider-joy-sadness"></div>
+            </div>
+            <div style="width: 100%; overflow: auto;">
+                    <label>Sad</label>
+                    <label class="right">Happy</label>
+            </div>
+            
+                <div class="col s12">
+                <h6>Overall, how are you feeling?</h6>
+                <p class="range-field">
+                    <input type="range" id="test5" min="0" max="10" />
+                    <label>Bad</label>
+                    <label class="right">Good</label>
+                </p>            
+            </div>
+            
+            <div class="col s12">
+                <h6>How stressed are you?</h6>
+                <p class="range-field">
+                    <input type="range" id="test6" min="0" max="10" />
+                    <label>Not Stressed at all</label>
+                    <label class="right">Very Stressed</label>
+                </p>            
+            </div>
+            <div class="col s12">
+                    <input  type="text" id="textarea1" ></textarea>
+                    <label for="textarea1">Describe how you feel</label>
+            </div>
+            <div class="col s12">
+                    <input type="text" id="textarea2"></input>
+                    <label for="textarea2">Have your moods shifted today?</label>
+            </div>                  
+        </div>
+        <button id="saveMood" class="btn waves-effect waves-light large right saveMood margins">Save
+                <i class="material-icons right">send</i>
+        </button>
+        <button class="btn waves-effect waves-light large right saveMood margins">Previous Mood
+                
+        </button>
+    </form>
+    </div>   
+    </div>
+    <div id="moodSumScreen" class="screen">
+        <h4 class="center">Previous Moods and Stress</h4>
+        <div id="moodChart"></div>
+        <h5 class="center">Feeling down? Try taking a break! Tap relax above.</h5>
+        <div class="row">
+            <div class="col s12">
+                <a id="doneMood" class="btn waves-effect waves-light large right margins" href="../index.html">Done
+                                <i class="material-icons right">done</i>
+                </a>   
+                <button id="moreMode" class="btn waves-effect waves-light large right margins">Add More
+                    <i class="material-icons right">loop</i>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <h4>Previous Moods</h4>
+                <ul class="collection with-header">
+                    <li class="collection-item">Mood Log: 11/6/16</li>
+                    <li class="collection-item">Mood Log: 11/4/16</li>
+                    <li class="collection-item">Mood Log: 11/2/16</li>
+                    <li class="collection-item">Mood Log: 11/1/16</li>
+                    <li class="collection-item">Mood Log: 10/31/16</li>
+                    <li class="collection-item">Mood Log: 10/28/16</li>
+                    <li class="collection-item">Mood Log: 10/25/16</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

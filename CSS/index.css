@@ -1,0 +1,26 @@
+.screen{
+    height: 90%;
+    width: 100%;
+    min-height: 90%;
+}
+
+html, body {
+    height: 100%;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    background: #26a69a;
+}
+
+#sidenav-overlay{
+    position: static;
+}
+
+.home-btn{
+    width: 40%;
+    margin: 5px;
+}
+
+.margins{
+    margin: 5px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <!--START Copy and paste this on all pages START-->
+    <head>
+        <meta charset="utf-8">
+        <title>IA Health - Journal</title>
+        <meta name="description" content="IA Health HCI Prototype">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="SitePoint">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script src="../JS/script.js"></script>
+        <script src="../JS/sleep.js"></script>
+        <script src="../JS/login.js"></script>
+        <script src="../JS/SaveJournal.js"></script>
+        <script src=""></script>
+        <link rel="stylesheet" href="../CSS/index.css"/>
+    </head>
+    <!--END Copy and paste this on all pages END-->
+    <body>
+     <!--START Copy and paste this on all pages START-->
+         <ul id="dropdown1" class="dropdown-content">
+            <li><a class="logout" href="../index.html">Logout</a></li>
+            <li><a href="Settings.html">Settings</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper brown">
+                <a href="../index.html" class="brand-logo">IA Health</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="mood.html">Mood</a></li>
+                    <li><a href="sleep.html">Sleep</a></li>
+                    <li><a href="resources.html">Iowa Resources</a></li>
+                    <li><a href="Relax.html">Relax</a></li>
+                    <li><a href="journal.html">Journals</a></li>
+                    <li><a href="community.html">Community</a></li>                    
+                    <li><a class="dropdown-button2" href="#!" data-activates="dropdown1">Settings<i class="material-icons right">arrow_drop_down</i></a></li>                    
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="mood.html">Mood</a></li>
+                    <li><a href="sleep.html">Sleep</a></li>
+                    <li><a href="resources.html">Iowa Resources</a></li>
+                    <li><a href="Relax.html">Relax</a></li>
+                    <li><a href="journal.html">Journals</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a class="logout" href="../index.html">Logout</a></li>
+            <li><a href="Settings.html">Settings</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+        <!--END Copy and paste this on all pages END-->
+        <div id="JournalScreen" class="card screen">
+        <div class="card-image waves-effect waves-block waves-light">
+<!--that was page eading-->
+            <div class="row">
+        	<div class="col s12">
+		    <h3 class="center">Journal</h3>
+            <div class="brown ">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                <div class="input-field col s12 ">
+                                    <div class="row">
+                                    <textarea id="journalArea" class="materialize-textarea"></textarea>
+                                    <label class="white-text">Todays Thoughts</label>
+                                    </div>
+                                </div>
+                                </div>
+                            </form>
+                         </div>
+                         <a id="SaveJournal" class="btn teal right" href="Journal.html">Save
+                                <i class="material-icons right">save</i>
+                </a>   
+                      </div>          
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+            <div class="label col s12">
+                   <label class=>Previous Thoughts</label>
+                        <ul id="jList" class="collection with-header">
+                            <li class="collection-item">Journal 11/6/2016: Today I had the best
+                                day. I made cookies with my best friend and listened to EDM with him.</li>
+                            <li class="collection-item">Journal 11/4/2016: I'm really stressed about my job interview next week. I hope it goes well. </li>
+                            <li class="collection-item">Journal 11/2/2016: Eeenie meeenie mineee moe, catch a tiger
+                                let it go, if he hollers let it go, Maybe I shouldn't let it go....</li>
+                            <li class="collection-item">Journal 11/1/2016: Dude!!! I'm feeling soooooo pumped. Maybe my halloweeen was too crazy, but life is definately looking up from here...</li>
+                            <li class="collection-item">Journal 10/31/2016: Hello from the other side, at least I can say that I tried. Thats all I got. But I hope you get this message.</li>
+                            <li class="collection-item">Journal 10/28/2016: I want to write something of substance here, but I don't know what. Everything just feels numb because its too late..</li>
+                            <li class="collection-item">Journal 10/25/2016: Quarter past four I left the club tipsy, dum dum dum dum dum dum dum dum, yeah This is a bumping song.</li>
+                        </ul>
+            </div>  
+            </body>
+                
+          </div>
+    </html>
+
+        
